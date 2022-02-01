@@ -12,6 +12,7 @@ def about(request):
 
 def contact(request):
     content = {
-        'title': "Contact-us"
+        'title': "Contact-us",
+
     }
     return render(request, 'contact.html', content)
