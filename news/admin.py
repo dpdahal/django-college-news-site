@@ -17,4 +17,4 @@ class AdminCategory(admin.ModelAdmin):
 
 @admin.register(Blog)
 class AdminBlog(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {'slug': ('title',)}

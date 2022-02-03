@@ -30,12 +30,13 @@ class Category(models.Model):
 class Blog(models.Model):
     cat_id = models.ForeignKey(Category, models.PROTECT)
     title = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, unique=True)
     meta_title = models.CharField(max_length=255)
     meta_keyword = models.TextField()
     meta_description = models.TextField()
     image = models.ImageField(upload_to='blog')
     page_visit = models.IntegerField(default=0)
+    is_slider = models.BooleanField(default=0)
     description = RichTextField()
 
     def __str__(self):
