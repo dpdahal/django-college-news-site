@@ -65,7 +65,7 @@
                     <li class="active"><a href="{% url 'index' %}"><span class="fa fa-home desktop-home"></span><span
                             class="mobile-show">Home</span></a></li>
                     {% for category in categoryData %}
-                    <li><a href="#">{{ category.cat_name }}</a></li>
+                    <li><a href="{% url 'category' category.id %}">{{ category.cat_name }}</a></li>
                     {% endfor %}
 
                 </ul>

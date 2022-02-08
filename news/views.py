@@ -40,3 +40,10 @@ def news_details(request, slug):
     }
 
     return render(request, 'news.html', content)
+
+
+def cat_news_list(request, id):
+    content = {
+        'newsData': Blog.objects.filter(cat_id=id)
+    }
+    return render(request, 'news-list.html', content)

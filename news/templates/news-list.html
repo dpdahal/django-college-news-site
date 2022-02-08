@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+{% block content %}
+
+    {% for news in newsData %}
+
+        <div class="col-md-6">
+        <h1><a href="">{{ news.title }}</a></h1>
+            <img src="{{ news.image.url }}" width="300" alt="">
+
+        </div>
+
+    {% endfor %}
+
+
+
+{% endblock %}
