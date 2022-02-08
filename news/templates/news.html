@@ -32,27 +32,17 @@
                         <div class="related_post">
                             <h2>Related Post <i class="fa fa-thumbs-o-up"></i></h2>
                             <ul class="spost_nav wow fadeInDown animated">
+                                {% for rel in relatedNews %}
                                 <li>
-                                    <div class="media"><a class="media-left" href="single_page.html"> <img
-                                            src="../images/post_img1.jpg" alt=""> </a>
-                                        <div class="media-body"><a class="catg_title" href="single_page.html"> Aliquam
-                                            malesuada diam eget turpis varius</a></div>
+                                    <div class="media"><a class="media-left" href="">
+                                        <img src="{{ rel.image.url }}" alt=""> </a>
+                                        <div class="media-body"><a class="catg_title" href="">
+                                        {{ rel.title }}
+                                        </a></div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="media"><a class="media-left" href="single_page.html"> <img
-                                            src="../images/post_img2.jpg" alt=""> </a>
-                                        <div class="media-body"><a class="catg_title" href="single_page.html"> Aliquam
-                                            malesuada diam eget turpis varius</a></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media"><a class="media-left" href="single_page.html"> <img
-                                            src="../images/post_img1.jpg" alt=""> </a>
-                                        <div class="media-body"><a class="catg_title" href="single_page.html"> Aliquam
-                                            malesuada diam eget turpis varius</a></div>
-                                    </div>
-                                </li>
+                                {% endfor %}
+
                             </ul>
                         </div>
                     </div>
